@@ -1,5 +1,5 @@
-@darwin_api_tests
-Feature: Validate the JSON Placeholder API's POST request
+@darwin_api_tests @post
+Feature: Validate the JSON Placeholder API's POST request - Happy Path Scenarios
 
   Background:
     Given baseUri is https://jsonplaceholder.typicode.com

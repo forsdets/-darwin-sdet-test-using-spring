@@ -1,5 +1,5 @@
 @darwin_api_tests
-Feature: Validate the JSON Placeholder API's GET end point by email
+Feature: Validate the JSON Placeholder API's GET end point by email - Happy Path Scenarios
 
   Background:
     Given baseUri is https://jsonplaceholder.typicode.com

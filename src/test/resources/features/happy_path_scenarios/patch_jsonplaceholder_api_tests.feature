@@ -1,10 +1,10 @@
 @darwin_api_tests
-Feature: Validate the JSON Placeholder API's PATCH end point
+Feature: Validate the JSON Placeholder API's PATCH end point - Happy Path Scenarios
 
   Background:
     Given baseUri is https://jsonplaceholder.typicode.com
 
-  @create_new_user_with_valid_post_body
+  @update_an_existing_user_data_with_valid_patch_body
   Scenario: Validate the PATCH Request by updating an existing user data
     Given user sets Accept header to application/json
     And user sets body to {"name": "testName", "email": "testemail@mail.com", "address": "testAddress", "phone": "7444466665", "website": "website.com"}
