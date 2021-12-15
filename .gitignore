@@ -1,0 +1,17 @@
+*.class
+
+# Package Files #
+*.war
+*.ear
+*.iml
+/.idea
+/venv
+/target
+/log
+/.gradle
+/build
+/usage
+/build/
+/.idea/
+/.gradle/
+/classes/
