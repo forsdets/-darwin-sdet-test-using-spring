@@ -1,8 +1,8 @@
-@darwin_api_tests @patch
+@darwin_api_tests @patch @negative_path
 Feature: Validate the JSON Placeholder API's PATCH request - Negative Scenarios
 
   Background:
-    Given baseUri is https://jsonplaceholder.typicode.com
+    Given baseUri is available
 
   @patch_request_with_missing_mandatory_field
   Scenario: Validate the PATCH Request by updating an existing user data with missing mandatory fields

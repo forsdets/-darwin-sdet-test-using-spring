@@ -18,7 +18,6 @@ import java.util.*;
 @SuppressWarnings("unchecked")
 abstract class AbstractStepDefinitionConsumer {
 
-    String baseUri;
     Map<String, Object> body;
     private final RestTemplate template;
     private final HttpHeaders headers;
@@ -26,6 +25,7 @@ abstract class AbstractStepDefinitionConsumer {
     private ResponseEntity<String> responseEntity;
     private final ObjectMapper objectMapper;
     private final ScenarioScope scenarioScope;
+    String baseUri;
 
     AbstractStepDefinitionConsumer() {
         template = new RestTemplate(new HttpComponentsClientHttpRequestFactory());

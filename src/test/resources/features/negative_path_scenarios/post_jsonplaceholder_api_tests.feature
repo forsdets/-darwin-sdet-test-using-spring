@@ -1,8 +1,8 @@
-@darwin_api_tests @post
+@darwin_api_tests @post @negative_path
 Feature: Validate the JSON Placeholder API's POST request - Negative Scenarios
 
   Background:
-    Given baseUri is https://jsonplaceholder.typicode.com
+    Given baseUri is available
 
   @post_request_with_missing_mandatory_field
   Scenario: Validate the new user creation by using POST Request with missing mandatory fields

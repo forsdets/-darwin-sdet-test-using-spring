@@ -6,10 +6,7 @@ import java.util.Map;
 
 public class ScenarioScope {
 
-    //Store http headers
     private final Map<String, Object> headers;
-
-    //Store json paths
     private final Map<String, Object> jsonPaths;
 
     public ScenarioScope() {

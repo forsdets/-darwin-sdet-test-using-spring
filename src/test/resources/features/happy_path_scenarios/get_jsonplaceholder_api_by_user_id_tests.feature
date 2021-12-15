@@ -1,8 +1,8 @@
-@darwin_api_tests
-Feature: Validate the JSON Placeholder API's GET end point - Happy Path Scenarios
+@darwin_api_tests @get @happy_path
+Feature: Validate the JSON Placeholder API's GET end point by id - Happy Path Scenarios
 
   Background:
-    Given baseUri is https://jsonplaceholder.typicode.com
+    Given baseUri is available
 
   @get_user_by_id
   Scenario: Validate the GET Request by retrieving an existing by user id

@@ -1,8 +1,8 @@
-@darwin_api_tests @put
+@darwin_api_tests @put @negative_path
 Feature: Validate the JSON Placeholder API's PUT request - Negative Scenarios
 
   Background:
-    Given baseUri is https://jsonplaceholder.typicode.com
+    Given baseUri is available
 
   @put_request_with_missing_mandatory_field
   Scenario: Validate the PUT Request by updating an existing user data with missing mandatory fields

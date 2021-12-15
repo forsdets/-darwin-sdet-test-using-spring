@@ -13,6 +13,6 @@ import org.junit.runner.RunWith;
                 "usage:usage/cucumber-usage.json"},
         features = "src/test/resources/features",
         glue = {"com.darwin.test.api.qa.stepdefinitions"},
-        tags = "@darwin_api_tests")
+        tags = "@happy_path")
 public class RunCuke {
 }

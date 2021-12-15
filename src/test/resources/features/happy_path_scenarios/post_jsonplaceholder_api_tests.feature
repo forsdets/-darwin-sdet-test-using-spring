@@ -1,8 +1,8 @@
-@darwin_api_tests @post
+@darwin_api_tests @post @happy_path
 Feature: Validate the JSON Placeholder API's POST request - Happy Path Scenarios
 
   Background:
-    Given baseUri is https://jsonplaceholder.typicode.com
+    Given baseUri is available
 
   @create_new_user_with_valid_post_body
   Scenario: Validate the new user creation by using POST Request

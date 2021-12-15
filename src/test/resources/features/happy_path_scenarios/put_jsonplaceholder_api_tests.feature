@@ -1,8 +1,8 @@
-@darwin_api_tests
+@darwin_api_tests @put @happy_path
 Feature: Validate the JSON Placeholder API's PUT end point - Happy Path Scenarios
 
   Background:
-    Given baseUri is https://jsonplaceholder.typicode.com
+    Given baseUri is available
 
   @update_an_existing_user_data_with_valid_put_body
   Scenario: Validate the PUT Request by updating an existing user data

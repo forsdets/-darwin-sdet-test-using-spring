@@ -11,20 +11,16 @@ import org.springframework.util.Assert;
 import java.io.IOException;
 import java.util.Map;
 
-/**
- * Default step definition for consuming a rest api
- * {@link ContextConfiguration} ContextConfiguration and {@link SpringBootTest} @SpringBootTest annotation
- * are mandatory to be able to run cucumber unit test on spring rest controllers
- */
 @ContextConfiguration
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 public class DefaultRestApiStepDefinitionTest extends AbstractStepDefinitionConsumer {
 
-    @Given("^baseUri is (.*)$")
-    public void baseUri(String uri) {
-        Assert.notNull(uri, "URI is not available");
-        Assert.isTrue(!uri.isEmpty(), "URI is empty");
-        baseUri = uri;
+    @Given("^baseUri is available$")
+    public void baseUri() {
+        final String uri = System.getProperties().getProperty("service.uri");
+        Assert.notNull(uri, "URI is not available as a run parameter");
+        Assert.isTrue(!uri.isEmpty(), "URI is empty in run parameter");
+        this.baseUri = uri;
     }
 
     @Given("^user sets body to (.*)$")
