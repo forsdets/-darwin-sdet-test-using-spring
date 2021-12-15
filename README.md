@@ -1,5 +1,18 @@
 # darwin-sdet-tests
 
+## API Scenario Structure
+
+- The API test Feature files are available in location:
+
+```> src/test/resources/features```
+
+- The scenarios have been divided into 2 parts, one is Happy path and another one is Negative path scenarios for all the requests mentioned in the SDET question
+- The feature level common tag '@darwin_api_tests' which can help to run all the scenarios (both happy and negative path)
+- The feature level tag '@get' can help to run all the 'get' request scenarios(both happy and negative path), similarly for all other requests 
+- The feature level tag '@happy_path' can help to run happy path scenarios alone for all the requests similarly @negative_path can help to run negative scenarios
+
+#### Run the API Tests through gradle task or Pipeline or standalone Jenkins job
+
 ## Run the API Tests
 
 #### Run the API Tests through Cucumber Runner class
