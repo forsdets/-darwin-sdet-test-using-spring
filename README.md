@@ -1,4 +1,4 @@
-# darwin-sdet-tests
+# jsonplaceholder-api-tests
 
 ## API Scenario Structure
 
@@ -29,11 +29,11 @@ Steps to follow:
 
 - Right click and Run by setting the below runtime parameter
 
-The Run time parameter needs to be updated based on which environment we are running.
-
 ```bash
 -Dservice.uri=https://jsonplaceholder.typicode.com
 ```
+- The Run time parameter needs to be updated based on which environment we are running if we are running the scenarios locally.
+- If we integrated this with the CI/CD pipeline then the environment parameter will be passed by the Jenkins or Teamcity
 
 - The 'tags' parameter will give the option to mention the feature or scenario tag to run
 
@@ -56,7 +56,7 @@ These tests can be integrated easily with CI/CD Pipeline by creating a new test 
 
 *****************************************
 Note:
-
+*****************************************
 - The APIs are not giving the expected results for negative scenarios but the same can be necessary for real-time APIs.
 - We can add/do the schema(request, response) validation against the swagger setup, I tried but received some un-related issues. 
   So it's worth to add this kind of validation in Contract testing or unit level testing.
