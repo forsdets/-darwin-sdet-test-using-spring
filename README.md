@@ -2,46 +2,42 @@
 
 ## API Scenario Structure
 
-- The API test Feature files are available in location:
-
-```> src/test/resources/features```
-
 - Here I have used Gradle as a build tool with Java-BDD Cucumber framework along with these mainly I have used Spring-boot for API's requests and responses
 - As this is a Java based QA Repository to validate the API functionality of jsonplaceholder-api
 - The scenarios have been divided into 2 parts, one is Happy path and another one is Negative path scenarios for all the requests mentioned in the SDET question
 - The feature level common tag '@darwin_api_tests' which can help to run all the scenarios (both happy and negative path)
 - The feature level tag '@get' can help to run all the 'get' request scenarios(both happy and negative path), similarly for all other requests 
 - The feature level tag '@happy_path' can help to run happy path scenarios alone for all the requests similarly @negative_path can help to run negative scenarios
+- The API test Feature files are available in the location:
 
-#### Run the API Tests through gradle task or Pipeline or standalone Jenkins job
+```> src/test/resources/features```
 
-## Run the API Tests
+## Run the API Tests through gradle task or Pipeline or standalone Jenkins job
 
-#### Run the API Tests through Cucumber Runner class
+### Run the API Tests locally
+
+#### 1. Run the API Tests through Cucumber the Runner class
 
 Steps to follow:
 
 - Import gradle Dependencies
 
-- Check the BDD Feature files are available in:
-
-```> src/test/resources/features```
-
 - In IDE Go to **src> test> java> runner> RunCuke**
 
 - Right click and Run by setting the below runtime parameter
+- The Run time parameter needs to be updated based on which environment we are running if we are running the scenarios locally.
+- The 'tags' parameter will give the option to mention the feature or scenario tag to run
 
 ```bash
 -Dservice.uri=https://jsonplaceholder.typicode.com
 ```
-- The Run time parameter needs to be updated based on which environment we are running if we are running the scenarios locally.
-- If we integrated this with the CI/CD pipeline then the environment parameter will be passed by the Jenkins or Teamcity
+#### 1. Run the API Tests through CI/CD Pipeline or a Jenkins Job
 
-- The 'tags' parameter will give the option to mention the feature or scenario tag to run
+- If we integrated this with the CI/CD pipeline then the environment parameter will be passed by the Jenkins or Teamcity
 
 #### Run the API Tests through gradle task or Pipeline or standalone Jenkins job
 
-From IDE's terminal or gitbash or  we can use the below parameters to run API scenarios
+From IDE's terminal or gitbash we can use the below parameters to run API scenarios
 Syntax:
 ```bash
 ./gradle clean cucumber -Dservice.uri=https://jsonplaceholder.typicode.com
