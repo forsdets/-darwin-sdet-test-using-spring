@@ -52,3 +52,29 @@ Example:
 Similarly, we can run for other environments by configuring/providing the above 2 parameters in runtime on Pipeline or standalone Jenkins Job.
 
 These tests can be integrated easily with CI/CD Pipeline by creating a new test stage, and it can be executed whenever we are making a change in this API.
+
+
+*****************************************
+Note:
+
+- The APIs are not giving the expected results for negative scenarios but the same can be necessary for real-time APIs.
+- We can add/do the schema(request, response) validation against the swagger setup, I tried but received some un-related issues. 
+  So it's worth to add this kind of validation in Contract testing or unit level testing.
+
+Example code what I tried,
+```bash
+  // GIVEN
+  RestAssured.given().baseUri("https://jsonplaceholder.typicode.com/auth")
+  .body(jsonStringPayload)
+  // WHEN
+  .when()
+  .post()
+  // THEN
+  .then()
+  .assertThat()
+  .statusCode(200)
+  .body("token", Matchers.notNullValue())
+  .body(JsonSchemaValidator.matchesJsonSchema("SchemaFilePath")));
+  }
+  ```
+*****************************************

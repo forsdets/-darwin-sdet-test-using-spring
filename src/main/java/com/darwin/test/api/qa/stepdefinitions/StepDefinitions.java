@@ -13,7 +13,7 @@ import java.util.Map;
 
 @ContextConfiguration
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
-public class DefaultRestApiStepDefinitionTest extends AbstractStepDefinitionConsumer {
+public class StepDefinitions extends AbstractStepDefinitionConsumer {
 
     @Given("^baseUri is available$")
     public void baseUri() {
