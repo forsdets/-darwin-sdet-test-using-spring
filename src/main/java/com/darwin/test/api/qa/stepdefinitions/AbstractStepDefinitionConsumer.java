@@ -91,7 +91,6 @@ abstract class AbstractStepDefinitionConsumer {
         } else {
             httpEntity = new HttpEntity(headers);
         }
-
         responseEntity = this.template.exchange(baseUri + resource, method, httpEntity, String.class, queryParams);
         Assert.notNull(responseEntity, "ResponseEntity is null");
     }
@@ -210,7 +209,7 @@ abstract class AbstractStepDefinitionConsumer {
 
     private ReadContext getBodyDocument() {
         ReadContext ctx = JsonPath.parse(responseEntity.getBody());
-        Assert.notNull(ctx, "Context should not be nul");
+        Assert.notNull(ctx, "Context should not be null");
 
         return ctx;
     }

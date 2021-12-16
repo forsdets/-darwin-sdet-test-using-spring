@@ -8,7 +8,7 @@ plugins {
     id 'java'
 }
 
-group 'darwin-sdet-tests'
+group 'jsonplaceholder-api-tests'
 version '0.0.1-SNAPSHOT'
 
 repositories {
@@ -31,6 +31,9 @@ dependencies {
     implementation 'com.jayway.jsonpath:json-path:2.6.0'
     implementation 'org.apache.httpcomponents:httpclient:4.5.13'
 
+    implementation 'io.rest-assured:rest-assured:4.4.0'
+    implementation 'io.rest-assured:json-schema-validator:4.4.0'
+
 }
 
 test {
@@ -41,5 +44,4 @@ task cucumber(type: JavaExec) {
     classpath = sourceSets.test.runtimeClasspath
     main = 'org.junit.runner.JUnitCore'
     args = ['com.darwin.test.api.qa.runner.RunCuke']
-
 }
