@@ -76,3 +76,9 @@ Example code what I tried,
   }
   ```
 *****************************************
+
+
+## Benefits of this framework
+- We can make the java classes whatever I have used in this repository as a Java-Library and that can be added as a dependency in any API's end to end or component level tests
+- Easy to integrate this with CI/CD pipeline
+  
