@@ -71,7 +71,6 @@ Example code what I tried,
   .then()
   .assertThat()
   .statusCode(200)
-  .body("token", Matchers.notNullValue())
   .body(JsonSchemaValidator.matchesJsonSchema("SchemaFilePath")));
   }
   ```
